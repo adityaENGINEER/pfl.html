@@ -1,115 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aditya Upadhyay LinkedIn Profile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Style Profile</title>
   <style>
-    .search-box {
-      width: 300px;
-      padding: 10px;
-      border: 2px solid #ccc;
-      border-radius: 25px;
-      outline: none;
-      font-size: 16px;
-    }
     body {
       font-family: Arial, sans-serif;
-      background-color: #f3f2ef;
+      background-color: #f4f4f4;
       margin: 0;
       padding: 0;
     }
-    .profile-header {
-      /* background-color: #1a1a1a; */
-      color: white;
-      padding: px;
+
+    header {
+      background-color: rgb(30, 27, 68);
+      color: rgb(246, 241, 241);
+      padding: 20px;
       text-align: center;
-      position: relative;
     }
-    .profile-photo {
+
+    .profile-container {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .profile-container img {
+      width: 135px;
+      height: 150px;
       border-radius: 50%;
-      border: 3px solid white;
-      width: 300px;
-      height: 320px;
-      object-fit: cover;
-      position: absolute;
-      top: 180px;
-      left: 20px;
+      border: 3px solid #333;
+      margin-right: 20px;
     }
-    .profile-content {
-      padding:190px 20px 20px 20px;
+
+    .profile-details {
+      flex: 1;
     }
+
     .name {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: bold;
     }
-    .pronoun {
-      font-size: 14px;
-      color: gray;
-    }
+
     .bio {
       font-size: 16px;
-      margin-top: 10px;
+      color: #555;
+      margin: 5px 0;
     }
-    .location {
-      color: #0073b1;
+
+    .location a {
+      color: #0077b5;
+      text-decoration: none;
     }
-    .college {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-    .buttons {
-      margin-top: 15px;
-    }
-    .buttons button {
-      background-color: #0a66c2;
+
+    button {
+      margin: 8px 5px 0 0;
+      padding: 8px 16px;
+      font-size: 14px;
+      background-color: #0077b5;
       color: white;
       border: none;
-      padding: 10px 15px;
-      margin-right: 10px;
-      cursor: pointer;
       border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005f8c;
+    }
+
+    /* Feed Section */
+    .feed {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 10px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-height: 500px;
+      overflow-y: auto;
+    }
+
+    .post {
+      display: flex;
+      align-items: flex-start;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 10px;
+    }
+
+    .post img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-right: 15px;
+      border: 2px solid #333;
+    }
+
+    .post-content {
+      flex: 1;
+    }
+
+    .post-content .name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .post-content .bio {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 6px;
+    }
+
+    .post-content p {
+      margin: 5px 0;
     }
   </style>
 </head>
 <body>
-    <hr>
-    <div>
-<div class="search-container">
-  <form onsubmit="return false;">
-    <input type="text" class="search-box" placeholder="Search...">
-</div>
-  <div class="profile-header">
-    <img src="https://media.licdn.com/dms/image/v2/D4E16AQGwdQtWv_5ghQ/profile-displaybackgroundimage-shrink_350_1400/B4EZcCDcxxHAAc-/0/1748086149410?e=1753315200&v=beta&t=3USvoaQ8-qoF2M7PxeNuxh_3yn7pNJBhNJYHoF2m09E" alt="">
-    
-    <img src="ADITYA PASSPORT SIZE PHOTO.jpg" alt="Aditya Upadhyay" class="profile-photo"/>
-      <!-- <h1>ADITYA UPADHYAY</h1> -->
-      <!-- <p style="text-align: right;">programmer</p> -->
-    <!-- <p>adityaupadhyay909@gmail.com</p> -->
+
+  <header>
+    <p style="text-align: right;">Aditya Upadhyay(Programmer)</p>
    
-  </div>
+     <p style="text-align: right;">adityaupadhya909@gmail.com</p>
+  </header>
 
-  <div class="profile-content">
-    <div class="name">Aditya Upadhyay <span class="pronoun">(He/Him)</span></div>
-    <div class="bio">C language © || HTML || PYTHON</div>
-    <div class="location">Agra, Uttar Pradesh, India</div>
-    <div class="college">IIMT College of Engineering, Greater Noida</div>
-    <div class="buttons">
-      <button>Open to</button>
-      <button>Add profile section</button>
-      <button>Enhance profile</button>
-      <button>Resources</button>
+  <!-- Main Profile -->
+  <div class="profile-container">
+    <img src="ADITYA PASSPORT SIZE PHOTO.jpg" alt="Aditya">
+    <div class="profile-details">
+      <div class="name">Aditya Upadhyay</div>
+      <div class="bio">C Language || HTML || Python</div>
+      <div class="location"><a href="https://en.wikipedia.org/wiki/Agra">Agra, Uttar Pradesh</a></div>
+      <p>IIMT College of Engineering, Greater Noida</p>
+      <button>Follow</button>
+      <button>Add Friend</button>
     </div>
   </div>
-  <main>
-    <div>
-       <button style="padding: 10px 20px; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer;">
-  500+ connection  <blue background and text black -->
 
-
-
+  <!-- Feed Section -->
+  <div class="feed">
+    <!-- Bill Gates -->
+    <div class="post">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Bill_Gates_2018.jpg" alt="Bill Gates">
+      <div class="post-content">
+        <div class="name"><a href="https://en.wikipedia.org/wiki/Bill_Gates">bill Gates</a></div>
+        <div class="bio">Co-founder of Microsoft | Philanthropist</div>
+        <p>Technology is just a tool. It’s the people who truly make the difference.</p>
+      </div>
     </div>
 
-  </main>
+    <!-- Elon Musk -->
+    <div class="post">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Elon_Musk_Royal_Society.jpg" alt="Elon Musk">
+      <div class="post-content">
+        <div class="name">Elon Musk</div>
+        <div class="bio">CEO of SpaceX & Tesla</div>
+        <p>Working on making life multi-planetary. 🚀</p>
+      </div>
+    </div>
+
+    <!-- Sundar Pichai -->
+    <div class="post">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Sundar_pichai.png" alt="Sundar Pichai">
+      <div class="post-content">
+        <div class="name">Sundar Pichai</div>
+        <div class="bio">CEO of Google & Alphabet</div>
+        <p>AI will be one of the most important technologies of our time.</p>
+      </div>
+    </div>
+
+    <!-- Google Official -->
+    <div class="post">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo">
+      <div class="post-content">
+        <div class="name">Google</div>
+        <div class="bio">Technology Company</div>
+        <p>Helping billions of people find what they need every day. 🌍</p>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
